@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VA топ элементтері және олардың қосылыстары бойынша теориялық материалдар.">
+    <title>Теория — VALab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .theory-content{display:none}
+        .theory-content.active{display:block}
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-atom">⚛</span>
+                <span>VA<span class="accent">Lab</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Басты</a></li>
+                <li><a href="molecules.html">3D Молекулалар</a></li>
+                <li><a href="reactions.html">Реакциялар</a></li>
+                <li><a href="games.html">Ойындар</a></li>
+                <li><a href="survey.html">Сауалнама</a></li>
+                <li><a href="theory.html" class="active">Теория</a></li>
+                <li><a href="ai-lab.html">AI Көмекші</a></li>
+                <li><a href="prediction.html">Болжау</a></li>
+            </ul>
+            <div class="nav-right">
+                <select class="lang-select" id="lang-select">
+                    <option value="kk">Қаз</option>
+                    <option value="ru">Рус</option>
+                    <option value="en">Eng</option>
+                </select>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="tag">Теориялық бөлім</span>
+            <h1>VA топ элементтері және олардың <span class="glow-text">қосылыстары</span></h1>
+            <p>Әр элементтің құрылысы, физикалық-химиялық қасиеттері, маңызды реакциялары және қолданылуы қысқаша жинақталды.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="theory-tabs animate-on-scroll">
+                <button class="th-tab active" data-el="nitrogen">Азот</button>
+                <button class="th-tab" data-el="phosphorus">Фосфор</button>
+                <button class="th-tab" data-el="arsenic">Мышьяк</button>
+                <button class="th-tab" data-el="antimony">Сүрьма</button>
+                <button class="th-tab" data-el="bismuth">Висмут</button>
+                <button class="th-tab" data-el="compounds">Қосылыстар</button>
+            </div>
+
+            <div id="theory-nitrogen" class="theory-content active" style="display:block">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge n-bg"><div class="el-z">7</div><div class="el-sym">N</div><div class="th-config">2s²2p³</div></div>
+                    <div>
+                        <h2>Азот (N)</h2>
+                        <p>Азот — атмосферада бос күйінде мол кездесетін, үштік байланысқа ие өте тұрақты бейметалл. Тірі ағзалардағы ақуыздар мен нуклеин қышқылдарының маңызды құрамдасы.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Негізгі қасиеттері</h3>
+                        <ul>
+                            <li>Атом нөмірі: 7</li>
+                            <li>Тотығу дәрежелері: -3, +1, +2, +3, +4, +5</li>
+                            <li>Электртерістілігі: 3.04</li>
+                            <li>N₂ молекуласында N≡N үштік байланысы бар</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Оқытуда назар аударатын тұс</h3>
+                        <p>Азоттың инерттілігі мен аммиак, азот оксидтері, азот қышқылы сияқты қосылыстарының белсенділігі арасындағы айырманы реакция анимациясымен түсіндіру тиімді.</p>
+                    </div>
+                </div>
+                <div class="th-table glass animate-on-scroll">
+                    <h3>Маңызды деректер</h3>
+                    <table>
+                        <tr><td>Табиғатта кездесуі</td><td>Атмосферада 78%</td></tr>
+                        <tr><td>Сұйық азоттың қайнау температурасы</td><td>-196°C</td></tr>
+                        <tr><td>Өнеркәсіптік мәні</td><td>Аммиак және тыңайтқыш өндіру</td></tr>
+                    </table>
+                </div>
+                <div class="th-reallife glass animate-on-scroll">
+                    <h3>Қолданылуы</h3>
+                    <div class="rl-grid">
+                        <div class="rl-item"><span>🌬</span><p>Инертті орта жасау</p></div>
+                        <div class="rl-item"><span>🧊</span><p>Криогендік сұйық азот</p></div>
+                        <div class="rl-item"><span>🌾</span><p>Тыңайтқыш өндірісі</p></div>
+                        <div class="rl-item"><span>🏥</span><p>Медицина және зертхана</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="theory-phosphorus" class="theory-content">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge p-bg"><div class="el-z">15</div><div class="el-sym">P</div><div class="th-config">3s²3p³</div></div>
+                    <div>
+                        <h2>Фосфор (P)</h2>
+                        <p>Фосфор — бірнеше аллотропиялық түрі бар бейметалл. Ақ, қызыл және қара фосфор қасиеттері бойынша едәуір ерекшеленеді, сондықтан оны оқытуда салыстыру тәсілі өте пайдалы.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Аллотропиясы</h3>
+                        <ul>
+                            <li>Ақ фосфор — улы, белсенді, қараңғыда жарқырайды</li>
+                            <li>Қызыл фосфор — тұрақтырақ, сіріңкеде қолданылады</li>
+                            <li>Қара фосфор — қабатты құрылымды, графитке ұқсас</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Маңызы</h3>
+                        <p>Фосфор ДНҚ, РНҚ, АТФ құрамында болады. Сондықтан бұл элементті биологиямен байланыстыра оқыту оқушыға түсінуді жеңілдетеді.</p>
+                    </div>
+                </div>
+                <div class="th-table glass animate-on-scroll">
+                    <h3>Маңызды қосылыстары</h3>
+                    <table>
+                        <tr><td>P₄</td><td>Ақ фосфордың молекулалық формасы</td></tr>
+                        <tr><td>H₃PO₄</td><td>Фосфор қышқылы</td></tr>
+                        <tr><td>PCl₃ / PCl₅</td><td>Хлоридтері, молекула геометриясын түсіндіруге ыңғайлы</td></tr>
+                    </table>
+                </div>
+                <div class="th-reallife glass animate-on-scroll">
+                    <h3>Қолданылуы</h3>
+                    <div class="rl-grid">
+                        <div class="rl-item"><span>🧬</span><p>Биомолекулалар</p></div>
+                        <div class="rl-item"><span>🧯</span><p>Сіріңке және қауіпсіздік материалдары</p></div>
+                        <div class="rl-item"><span>🌱</span><p>Фосфат тыңайтқыштары</p></div>
+                        <div class="rl-item"><span>🏭</span><p>Өнеркәсіптік синтез</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="theory-arsenic" class="theory-content">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge as-bg"><div class="el-z">33</div><div class="el-sym">As</div><div class="th-config">4s²4p³</div></div>
+                    <div>
+                        <h2>Мышьяк (As)</h2>
+                        <p>Мышьяк — металлоид. Оның кейбір қосылыстары улы болғанымен, заманауи электроникада GaAs сияқты маңызды жартылай өткізгіштер осы элементпен байланысты.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Ерекшелігі</h3>
+                        <ul>
+                            <li>Металлоидтық қасиет көрсетеді</li>
+                            <li>Сұр мышьяк — ең тұрақты түрі</li>
+                            <li>AsH₃ аса улы газ</li>
+                            <li>As₂O₃ тарихи тұрғыдан белгілі у</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Оқытудың тиімді жолы</h3>
+                        <p>Мышьякты «қауіпті зат» ретінде ғана емес, «микроэлектроникадағы маңызды элемент» ретінде таныстыру пәнге қызығушылықты арттырады.</p>
+                    </div>
+                </div>
+                <div class="th-reallife glass animate-on-scroll">
+                    <h3>Практикалық байланыс</h3>
+                    <div class="rl-grid">
+                        <div class="rl-item"><span>💡</span><p>LED және лазерлер</p></div>
+                        <div class="rl-item"><span>📡</span><p>Жоғары жиілікті электроника</p></div>
+                        <div class="rl-item"><span>☀️</span><p>Ғарыштық күн батареялары</p></div>
+                        <div class="rl-item"><span>⚠️</span><p>Улылық қауіпсіздігі</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="theory-antimony" class="theory-content">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge sb-bg"><div class="el-z">51</div><div class="el-sym">Sb</div><div class="th-config">5s²5p³</div></div>
+                    <div>
+                        <h2>Сүрьма (Sb)</h2>
+                        <p>Сүрьма немесе stibium — қорытпаларда, отқа төзімді материалдарда және аккумулятор технологиясында маңызды орын алатын металлоид.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Негізгі дерек</h3>
+                        <ul>
+                            <li>Негізгі кені — стибнит (Sb₂S₃)</li>
+                            <li>Тотығу дәрежелері: -3, +3, +5</li>
+                            <li>Металлоидтық сипат көрсетеді</li>
+                            <li>Ежелгі дәуірден бері белгілі</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Сабақтағы байланыс</h3>
+                        <p>Сүрьманы металлоидтар тақырыбында «бейметалдан металға өтпелі қасиет» ұғымын нақтылау үшін пайдалану ыңғайлы.</p>
+                    </div>
+                </div>
+                <div class="th-reallife glass animate-on-scroll">
+                    <h3>Қолданылуы</h3>
+                    <div class="rl-grid">
+                        <div class="rl-item"><span>🔋</span><p>Аккумулятор қорытпалары</p></div>
+                        <div class="rl-item"><span>🔥</span><p>Отқа төзімді материалдар</p></div>
+                        <div class="rl-item"><span>🖨</span><p>Арнайы қорытпалар</p></div>
+                        <div class="rl-item"><span>⚙️</span><p>Техникалық өндіріс</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="theory-bismuth" class="theory-content">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge bi-bg"><div class="el-z">83</div><div class="el-sym">Bi</div><div class="th-config">6s²6p³</div></div>
+                    <div>
+                        <h2>Висмут (Bi)</h2>
+                        <p>Висмут — VA топтағы ең ауыр тұрақты элемент. Ол төмен уыттылығымен, әдемі оксидті кристалдарымен және төмен балқитын қорытпаларымен ерекшеленеді.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Ерекшелігі</h3>
+                        <ul>
+                            <li>Қызғылт-күміс түсті металл</li>
+                            <li>Төмен балқитын қорытпаларға кіреді</li>
+                            <li>Bi₂O₃ негіздік оксид ретінде қарастырылады</li>
+                            <li>Медицинада висмут тұздары қолданылады</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Оқыту идеясы</h3>
+                        <p>Висмутты экологиялық қауіпсіз балама материал және медицинамен байланысқан мысал ретінде беру оқушыға тақырыптың өмірмен байланысын көрсетеді.</p>
+                    </div>
+                </div>
+                <div class="th-reallife glass animate-on-scroll">
+                    <h3>Қолданылуы</h3>
+                    <div class="rl-grid">
+                        <div class="rl-item"><span>💊</span><p>Медицина</p></div>
+                        <div class="rl-item"><span>🎨</span><p>Пигменттер</p></div>
+                        <div class="rl-item"><span>🔩</span><p>Төмен балқитын қорытпа</p></div>
+                        <div class="rl-item"><span>🌍</span><p>Экологиялық материал</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="theory-compounds" class="theory-content">
+                <div class="th-hero glass animate-on-scroll">
+                    <div class="th-badge" style="background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(124,77,255,.15))">
+                        <div class="el-sym">VA</div>
+                        <div class="th-config">Қосылыстар</div>
+                    </div>
+                    <div>
+                        <h2>Маңызды қосылыстар мен реакциялар</h2>
+                        <p>Бұл бөлімде сабақта жиі қарастырылатын негізгі қосылыстар мен өндірістік маңызы бар реакциялар жинақталды.</p>
+                    </div>
+                </div>
+                <div class="th-grid">
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Негізгі қосылыстар</h3>
+                        <ul>
+                            <li>NH₃ — аммиак</li>
+                            <li>HNO₃ — азот қышқылы</li>
+                            <li>H₃PO₄ — фосфор қышқылы</li>
+                            <li>PCl₃, PCl₅ — молекула геометриясына мысал</li>
+                        </ul>
+                    </div>
+                    <div class="th-card glass animate-on-scroll">
+                        <h3>Өндірістік реакциялар</h3>
+                        <ul>
+                            <li>N₂ + 3H₂ ⇌ 2NH₃ — Габер процесі</li>
+                            <li>4NH₃ + 5O₂ → 4NO + 6H₂O — Оствальд процесінің 1-кезеңі</li>
+                            <li>P₄ + 5O₂ → 2P₂O₅ — фосфордың жануы</li>
+                            <li>3NO₂ + H₂O → 2HNO₃ + NO</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="th-table glass animate-on-scroll">
+                    <h3>Сабақтағы пәнаралық байланыс</h3>
+                    <table>
+                        <tr><td>Химия + Биология</td><td>Фосфордың ДНҚ, РНҚ, АТФ-тегі рөлі</td></tr>
+                        <tr><td>Химия + Физика</td><td>GaAs жартылай өткізгішінің қасиеттері</td></tr>
+                        <tr><td>Химия + Информатика</td><td>AI көмекші мен дерек талдауды пайдалану</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="doc-upload glass animate-on-scroll">
+                <h3>Құжат мәтінін жүктеп тексеру</h3>
+                <p>TXT форматындағы конспект немесе қысқаша мәтінді жүктесеңіз, сайт негізгі химиялық атауларды белгілеп көрсетеді.</p>
+                <input type="file" id="doc-file" accept=".txt">
+                <div class="doc-content glass" id="doc-content" style="display:none"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>© 2026 VALab</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.th-tab').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                document.querySelectorAll('.theory-content').forEach(c=>{c.classList.remove('active');c.style.display='none';});
+                const target=document.getElementById('theory-'+btn.dataset.el);
+                if(target){target.classList.add('active');target.style.display='block';}
+            });
+        });
+    </script>
+</body>
+</html>

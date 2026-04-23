@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VALab — VA топ элементтері және олардың қосылыстарын оқытуға арналған интерактивті білім беру сайты.">
+    <title>VALab — VA топ элементтерін AI арқылы оқыту</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .home-links{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .home-link-card{padding:28px}
+        .home-link-card h3{margin:10px 0 8px;font-size:1.05rem}
+        .home-link-card p{font-size:.88rem;color:var(--text2);margin-bottom:16px}
+        .home-link-icon{font-size:2rem}
+        .research-note{padding:24px}
+        .research-note p{color:var(--text2);font-size:.9rem}
+        @media(max-width:900px){.home-links{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-atom">⚛</span>
+                <span>VA<span class="accent">Lab</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Басты</a></li>
+                <li><a href="molecules.html">3D Молекулалар</a></li>
+                <li><a href="reactions.html">Реакциялар</a></li>
+                <li><a href="games.html">Ойындар</a></li>
+                <li><a href="survey.html">Сауалнама</a></li>
+                <li><a href="theory.html">Теория</a></li>
+                <li><a href="ai-lab.html">AI Көмекші</a></li>
+                <li><a href="prediction.html">Болжау</a></li>
+                <li><a href="practice.html">Практика нәтижесі</a></li>
+            </ul>
+            <div class="nav-right">
+                <select class="lang-select" id="lang-select">
+                    <option value="kk">Қаз</option>
+                    <option value="ru">Рус</option>
+                    <option value="en">Eng</option>
+                </select>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <span class="pulse-dot"></span>
+                Дипломдық жұмысқа арналған интерактивті платформа
+            </div>
+            <h1 class="hero-title animate-in d1">
+                VA топ элементтерін <span class="glow-text">жасанды интеллект</span><br>
+                арқылы оқыту жолдары
+            </h1>
+            <p class="hero-desc animate-in d2">
+                Азот, фосфор, мышьяк, сүрьма және висмут тақырыптарын 3D модель, реакция анимациясы,
+                ойын, сауалнама және AI көмекші арқылы түсіндіруге арналған цифрлық оқу ортасы.
+            </p>
+            <div class="hero-actions animate-in d3">
+                <a href="theory.html" class="btn btn-glow btn-lg">Теорияны оқу</a>
+                <a href="games.html" class="btn btn-outline btn-lg">Ойындарды ашу</a>
+            </div>
+            <div class="hero-stats animate-in d4">
+                <div class="h-stat">
+                    <span class="h-stat-num" data-count="5">5</span>
+                    <span class="h-stat-label">элемент</span>
+                </div>
+                <div class="h-stat-div"></div>
+                <div class="h-stat">
+                    <span class="h-stat-num" data-count="6">6</span>
+                    <span class="h-stat-label">оқу модулі</span>
+                </div>
+                <div class="h-stat-div"></div>
+                <div class="h-stat">
+                    <span class="h-stat-num" data-count="4">4</span>
+                    <span class="h-stat-label">интерактив құрал</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="sec-header animate-on-scroll">
+                <span class="tag">VA Тобы</span>
+                <h2>Негізгі <span class="glow-text">элементтер</span></h2>
+            </div>
+            <div class="el-grid">
+                <div class="el-card animate-on-scroll">
+                    <div class="el-top n-bg"><div class="el-z">7</div><div class="el-sym">N</div><div class="el-mass">14.01</div></div>
+                    <h3>Азот</h3>
+                    <p>Атмосфераның 78%-ын құрайтын бейметалл, тіршілік үшін аса маңызды элемент.</p>
+                    <div class="el-tags"><span>NH₃</span><span>HNO₃</span><span>N₂</span></div>
+                </div>
+                <div class="el-card animate-on-scroll">
+                    <div class="el-top p-bg"><div class="el-z">15</div><div class="el-sym">P</div><div class="el-mass">30.97</div></div>
+                    <h3>Фосфор</h3>
+                    <p>Аллотропиялық түрлері бар, биожүйелердегі ДНҚ мен АТФ құрамына кіреді.</p>
+                    <div class="el-tags"><span>P₄</span><span>H₃PO₄</span><span>PCl₅</span></div>
+                </div>
+                <div class="el-card animate-on-scroll">
+                    <div class="el-top as-bg"><div class="el-z">33</div><div class="el-sym">As</div><div class="el-mass">74.92</div></div>
+                    <h3>Мышьяк</h3>
+                    <p>Металлоид, жартылай өткізгіш материалдар мен қорытпаларда қолданылады.</p>
+                    <div class="el-tags"><span>GaAs</span><span>As₂O₃</span><span>AsH₃</span></div>
+                </div>
+                <div class="el-card animate-on-scroll">
+                    <div class="el-top sb-bg"><div class="el-z">51</div><div class="el-sym">Sb</div><div class="el-mass">121.76</div></div>
+                    <h3>Сүрьма</h3>
+                    <p>Stibium деп те аталады, отқа төзімді материалдар мен аккумуляторларда кездеседі.</p>
+                    <div class="el-tags"><span>Sb₂S₃</span><span>Sb₂O₃</span><span>Sb</span></div>
+                </div>
+                <div class="el-card animate-on-scroll">
+                    <div class="el-top bi-bg"><div class="el-z">83</div><div class="el-sym">Bi</div><div class="el-mass">208.98</div></div>
+                    <h3>Висмут</h3>
+                    <p>VA топтағы ең ауыр тұрақты элемент, медицина мен төмен балқитын қорытпаларда қолданылады.</p>
+                    <div class="el-tags"><span>Bi₂O₃</span><span>Bi</span><span>Қорытпа</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="sec-header animate-on-scroll">
+                <span class="tag">Модульдер</span>
+                <h2>Сайттың <span class="glow-text">құрылымы</span></h2>
+            </div>
+            <div class="home-links">
+                <a class="home-link-card glass animate-on-scroll" href="molecules.html">
+                    <div class="home-link-icon">🧪</div>
+                    <h3>3D молекулалар</h3>
+                    <p>NH₃, NO₂, HNO₃, P₄, PCl₃ және PCl₅ модельдерін айналдырып, кеңістіктік құрылысын талдаңыз.</p>
+                    <span class="accent">Көру →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="reactions.html">
+                    <div class="home-link-icon">⚗️</div>
+                    <h3>Реакция анимациялары</h3>
+                    <p>Габер процесі, Оствальд процесі және фосфордың жануын қадам бойынша қараңыз.</p>
+                    <span class="accent">Ашу →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="games.html">
+                    <div class="home-link-icon">🎮</div>
+                    <h3>Геймификация</h3>
+                    <p>Молекула құрастыру, реакция пазлы, quiz және рас/жалған ойындары арқылы бекіту жүргізіледі.</p>
+                    <span class="accent">Ойнау →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="survey.html">
+                    <div class="home-link-icon">📊</div>
+                    <h3>Сауалнама талдауы</h3>
+                    <p>Оқушылардың платформаға дейінгі және кейінгі нәтижелерін диаграммалар арқылы салыстыруға болады.</p>
+                    <span class="accent">Талдау →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="ai-lab.html">
+                    <div class="home-link-icon">🤖</div>
+                    <h3>AI көмекші</h3>
+                    <p>VA топ элементтері бойынша сұрақ қойып, жедел түсіндірме мен қысқа анықтама алыңыз.</p>
+                    <span class="accent">Сұрау →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="prediction.html">
+                    <div class="home-link-icon">📈</div>
+                    <h3>Оқу үлгерімін болжау</h3>
+                    <p>Машиналық оқытуға негізделген үлгі арқылы оқушы нәтижесін бағалау интерфейсі.</p>
+                    <span class="accent">Болжау →</span>
+                </a>
+                <a class="home-link-card glass animate-on-scroll" href="practice.html">
+                    <div class="home-link-icon">📂</div>
+                    <h3>Практика нәтижесі</h3>
+                    <p>Әр сабаққа арналған презентациялар мен суреттерді сайтқа жүктеп, сақтап, кейін қайта ашуға болады.</p>
+                    <span class="accent">Жүктеу →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="sec-header animate-on-scroll">
+                <span class="tag">Салыстыру</span>
+                <h2>VA топ элементтерінің <span class="glow-text">қасиеттері</span></h2>
+            </div>
+            <div class="glass table-wrap animate-on-scroll">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Көрсеткіш</th>
+                            <th class="n-col">N</th>
+                            <th class="p-col">P</th>
+                            <th class="as-col">As</th>
+                            <th class="sb-col">Sb</th>
+                            <th class="bi-col">Bi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Атом нөмірі</td><td>7</td><td>15</td><td>33</td><td>51</td><td>83</td></tr>
+                        <tr><td>Сыртқы электрондары</td><td>ns²np³</td><td>ns²np³</td><td>ns²np³</td><td>ns²np³</td><td>ns²np³</td></tr>
+                        <tr><td>Табиғаты</td><td>Бейметалл</td><td>Бейметалл</td><td>Металлоид</td><td>Металлоид</td><td>Металл</td></tr>
+                        <tr><td>Негізгі тотығу дәрежелері</td><td>-3, +3, +5</td><td>-3, +3, +5</td><td>-3, +3, +5</td><td>-3, +3, +5</td><td>+3, +5</td></tr>
+                        <tr><td>Электртерістілік</td><td>3.04</td><td>2.19</td><td>2.18</td><td>2.05</td><td>2.02</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="sec-header animate-on-scroll">
+                <span class="tag">Дипломдық жұмыс</span>
+                <h2>Платформаның <span class="glow-text">оқытудағы рөлі</span></h2>
+            </div>
+            <div class="feat-grid">
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">🧠</div>
+                    <h3>Көрнекілік</h3>
+                    <p>3D модель мен анимация абстрактілі химиялық ұғымдарды нақты қабылдауға көмектеседі.</p>
+                </div>
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">🎯</div>
+                    <h3>Жеке траектория</h3>
+                    <p>AI көмекші мен ойындар оқушының білім деңгейіне сай жылдам кері байланыс ұсынады.</p>
+                </div>
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">📚</div>
+                    <h3>Теория + практика</h3>
+                    <p>Теориялық мазмұн бірден ойынмен, реакциямен және молекула құрылысымен байланысады.</p>
+                </div>
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">📊</div>
+                    <h3>Өлшенетін нәтиже</h3>
+                    <p>Сауалнама мен болжау модулі оқу тиімділігін талдауға және қорытынды жасауға мүмкіндік береді.</p>
+                </div>
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">🧩</div>
+                    <h3>Қызығушылықты арттыру</h3>
+                    <p>Геймификация оқушының зейінін сақтап, күрделі тақырыптарды жеңіл қабылдауға жағдай жасайды.</p>
+                </div>
+                <div class="feat-card animate-on-scroll">
+                    <div class="feat-icon">👩‍🏫</div>
+                    <h3>Мұғалімге қолдау</h3>
+                    <p>Сайт сабақта, факультативте немесе өзіндік жұмыста қосымша цифрлық ресурс бола алады.</p>
+                </div>
+            </div>
+            <div class="research-note glass animate-on-scroll" style="margin-top:24px">
+                <p>
+                    Тақырып: <strong>«VA топ элементтерінің және олардың қосылыстарының қасиеттерін оқытуда жасанды интеллектіні пайдалану жолдары»</strong>.
+                    Бұл сайт сол зерттеудің практикалық бөлігі ретінде жинақталды.
+                </p>
+            </div>
+            <div class="research-note glass animate-on-scroll" style="margin-top:20px">
+                <p>
+                    Жаңа <strong>«Практика нәтижесі»</strong> бөлімінде әр сабақ бойынша презентация мен суреттерді жеке-жеке жүктеп, осы браузерде сақтап отыруға болады.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo"><span class="logo-atom">⚛</span><span>VA<span class="accent">Lab</span></span></a>
+                    <p>Химияны заманауи цифрлық тәсілдермен оқытуға арналған дипломдық жоба сайты.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Бөлімдер</h4>
+                    <a href="theory.html">Теория</a>
+                    <a href="molecules.html">3D молекулалар</a>
+                    <a href="reactions.html">Реакциялар</a>
+                </div>
+                <div class="footer-nav">
+                    <h4>Құралдар</h4>
+                    <a href="games.html">Ойындар</a>
+                    <a href="ai-lab.html">AI көмекші</a>
+                    <a href="prediction.html">Болжау</a>
+                    <a href="practice.html">Практика нәтижесі</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 VALab</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

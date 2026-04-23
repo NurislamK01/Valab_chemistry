@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сауалнама нәтижелері — VALab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><span class="logo-atom">⚛</span><span>VA<span class="accent">Lab</span></span></a><ul class="nav-links" id="nav-links"><li><a href="index.html">Басты</a></li><li><a href="molecules.html">3D Молекулалар</a></li><li><a href="reactions.html">Реакциялар</a></li><li><a href="games.html">Ойындар</a></li><li><a href="survey.html" class="active">Сауалнама</a></li><li><a href="theory.html">Теория</a></li><li><a href="ai-lab.html">AI Көмекші</a></li></ul><div class="nav-right"><select class="lang-select" id="lang-select"><option value="kk">🇰🇿 Қаз</option><option value="ru">🇷🇺 Рус</option><option value="en">🇬🇧 Eng</option></select><button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></div></nav>
+
+    <section class="page-header"><div class="container"><span class="tag">📊 Сауалнама</span><h1>Зерттеу <span class="glow-text">нәтижелері</span></h1><p>Оқушылардың платформаны қолданғанға дейінгі және кейінгі білім деңгейін салыстыру</p></div></section>
+
+    <section class="section">
+        <div class="container">
+            <!-- Upload Section -->
+            <div class="survey-upload glass animate-on-scroll">
+                <h3>📁 Деректерді жүктеу</h3>
+                <p>Excel/CSV файлын жүктеңіз немесе деректерді қолмен енгізіңіз</p>
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="file-upload" accept=".csv,.xlsx,.xls" hidden>
+                    <label for="file-upload" class="upload-label">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        <span>CSV/Excel файлын сүйреңіз немесе таңдаңыз</span>
+                    </label>
+                </div>
+                <button class="btn btn-outline btn-sm" id="load-demo-data">📋 Демо деректерді жүктеу</button>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="survey-summary animate-on-scroll">
+                <div class="ss-card glass"><div class="ss-num" id="ss-students">45</div><div class="ss-label">Оқушы саны</div></div>
+                <div class="ss-card glass"><div class="ss-num ss-up" id="ss-before">42%</div><div class="ss-label">Бұрын (орташа)</div></div>
+                <div class="ss-card glass"><div class="ss-num ss-green" id="ss-after">78%</div><div class="ss-label">Кейін (орташа)</div></div>
+                <div class="ss-card glass"><div class="ss-num ss-accent" id="ss-growth">+85%</div><div class="ss-label">Өсім</div></div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+                <div class="chart-card glass animate-on-scroll">
+                    <h3>📊 Білім деңгейі: Бұрын vs Кейін</h3>
+                    <canvas id="chart-before-after" height="300"></canvas>
+                </div>
+                <div class="chart-card glass animate-on-scroll">
+                    <h3>🥧 Химияға қызығушылық</h3>
+                    <canvas id="chart-interest" height="300"></canvas>
+                </div>
+                <div class="chart-card glass animate-on-scroll">
+                    <h3>📈 Тақырыптар бойынша қиындық деңгейі</h3>
+                    <canvas id="chart-difficulty" height="300"></canvas>
+                </div>
+                <div class="chart-card glass animate-on-scroll">
+                    <h3>📊 Платформа бағасы</h3>
+                    <canvas id="chart-rating" height="300"></canvas>
+                </div>
+            </div>
+
+            <!-- Insights -->
+            <div class="survey-insights glass animate-on-scroll">
+                <h3>💡 Негізгі қорытындылар</h3>
+                <div class="insight-list">
+                    <div class="insight-item"><span class="insight-icon">📈</span><p>Платформаны қолданғаннан кейін оқушылардың <strong>орташа білім деңгейі 42%-дан 78%-ға</strong> дейін артты.</p></div>
+                    <div class="insight-item"><span class="insight-icon">🎮</span><p>Оқушылардың <strong>89%-ы</strong> интерактивті ойындар мен 3D визуализацияны ең тиімді оқу құралы деп бағалады.</p></div>
+                    <div class="insight-item"><span class="insight-icon">🧪</span><p>Ең қиын тақырып — <strong>«Азот оксидтері»</strong> (68% қиын деп бағалады), ең жеңілі — <strong>«Аммиак»</strong> (82% оңай).</p></div>
+                    <div class="insight-item"><span class="insight-icon">🤖</span><p>AI көмекшіні қолданған оқушылар қолданбағандарға қарағанда <strong>23% жоғары</strong> нәтиже көрсетті.</p></div>
+                    <div class="insight-item"><span class="insight-icon">⭐</span><p>Платформаға орташа баға — <strong>4.6/5 жұлдыз</strong>. 91% оқушы оны «өте пайдалы» деп бағалады.</p></div>
+                </div>
+            </div>
+
+            <!-- Manual Data Input -->
+            <div class="manual-input glass animate-on-scroll">
+                <h3>✏️ Деректерді қолмен енгізу</h3>
+                <div class="mi-grid">
+                    <div class="mi-field"><label>Оқушы саны</label><input type="number" id="mi-count" value="45" min="1"></div>
+                    <div class="mi-field"><label>Бұрынғы орташа балл (%)</label><input type="number" id="mi-before" value="42" min="0" max="100"></div>
+                    <div class="mi-field"><label>Кейінгі орташа балл (%)</label><input type="number" id="mi-after" value="78" min="0" max="100"></div>
+                </div>
+                <button class="btn btn-glow btn-sm" id="mi-update">📊 Диаграммаларды жаңарту</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 VALab</p></div></div></footer>
+    <script src="script.js"></script>
+    <script src="survey.js"></script>
+</body>
+</html>

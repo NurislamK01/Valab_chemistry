@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VALab ойындары: молекула құрастыру, реакция пазлы, quiz және рас/жалған тапсырмалары.">
+    <title>Ойындар — VALab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-atom">⚛</span>
+                <span>VA<span class="accent">Lab</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Басты</a></li>
+                <li><a href="molecules.html">3D Молекулалар</a></li>
+                <li><a href="reactions.html">Реакциялар</a></li>
+                <li><a href="games.html" class="active">Ойындар</a></li>
+                <li><a href="survey.html">Сауалнама</a></li>
+                <li><a href="theory.html">Теория</a></li>
+                <li><a href="ai-lab.html">AI Көмекші</a></li>
+                <li><a href="prediction.html">Болжау</a></li>
+            </ul>
+            <div class="nav-right">
+                <select class="lang-select" id="lang-select">
+                    <option value="kk">Қаз</option>
+                    <option value="ru">Рус</option>
+                    <option value="en">Eng</option>
+                </select>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="tag">Геймификация</span>
+            <h1>Білімді <span class="glow-text">ойын арқылы</span> бекіту</h1>
+            <p>VA топ элементтері тақырыбын қызықты форматта қайталап, ұпай жинаңыз және жетістік белгілерін ашыңыз.</p>
+        </div>
+    </section>
+
+    <div class="player-bar">
+        <div class="container player-bar-inner">
+            <div class="pb-stat"><span class="pb-icon">⭐</span><span>Ұпай: <strong id="total-points">0</strong></span></div>
+            <div class="pb-stat"><span class="pb-icon">🏅</span><span>Деңгей: <strong id="player-level">Бастаушы</strong></span></div>
+            <div class="pb-stat"><span class="pb-icon">🎖</span><span>Белгілер: <strong id="badge-count">0</strong></span></div>
+            <div class="pb-progress"><div class="pb-progress-fill" id="xp-fill" style="width:0%"></div></div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="game-tabs animate-on-scroll">
+                <button class="game-tab active" data-game="build">Молекула</button>
+                <button class="game-tab" data-game="puzzle">Пазл</button>
+                <button class="game-tab" data-game="quiz">Quiz</button>
+                <button class="game-tab" data-game="tf">Рас/Жалған</button>
+            </div>
+
+            <div class="game-panel" id="game-build">
+                <div class="glass build-game animate-on-scroll">
+                    <div class="game-header">
+                        <h2>Молекула құрастыру</h2>
+                        <div class="game-level-select">
+                            <button class="lvl-btn active">Негізгі</button>
+                            <button class="lvl-btn">Орташа</button>
+                            <button class="lvl-btn">Күрделі</button>
+                        </div>
+                    </div>
+                    <p class="build-target">Құрастыру керек молекула: <strong id="build-target-name">NH₃</strong></p>
+                    <div class="build-workspace">
+                        <div class="build-zone" id="build-zone">
+                            <p class="build-hint">Атомдарды осы жерге сүйреңіз</p>
+                        </div>
+                    </div>
+                    <div class="build-atoms" id="build-atoms"></div>
+                    <div class="build-actions">
+                        <button class="btn btn-glow btn-sm" id="build-check">Тексеру</button>
+                        <button class="btn btn-outline btn-sm" id="build-reset">Қайта бастау</button>
+                        <button class="btn btn-outline btn-sm" id="build-next">Келесі молекула</button>
+                    </div>
+                    <div class="build-feedback" id="build-feedback"></div>
+                </div>
+            </div>
+
+            <div class="game-panel" id="game-puzzle" style="display:none">
+                <div class="glass puzzle-game animate-on-scroll">
+                    <div class="game-header">
+                        <h2>Реакция теңдеуін жина</h2>
+                        <p class="puzzle-instruction">Бөлшектерді дұрыс ретпен орналастырып, реакцияны аяқтаңыз.</p>
+                    </div>
+                    <div class="puzzle-slots" id="puzzle-slots"></div>
+                    <div class="puzzle-pieces" id="puzzle-pieces"></div>
+                    <div class="build-actions">
+                        <button class="btn btn-glow btn-sm" id="puzzle-check">Тексеру</button>
+                        <button class="btn btn-outline btn-sm" id="puzzle-reset">Қайта жинау</button>
+                        <button class="btn btn-outline btn-sm" id="puzzle-next">Келесі реакция</button>
+                    </div>
+                    <div class="build-feedback" id="puzzle-feedback"></div>
+                </div>
+            </div>
+
+            <div class="game-panel" id="game-quiz" style="display:none">
+                <div class="glass animate-on-scroll">
+                    <div class="quiz-start-screen" id="quiz-start">
+                        <div class="qss-icon">🎯</div>
+                        <h3>Quiz режимі</h3>
+                        <p>10 сұраққа жауап беріп, білім деңгейіңізді тексеріңіз.</p>
+                        <div class="game-level-select" style="justify-content:center;margin-bottom:20px">
+                            <button class="qlvl-btn active" data-lvl="easy">Жеңіл</button>
+                            <button class="qlvl-btn" data-lvl="medium">Орташа</button>
+                            <button class="qlvl-btn" data-lvl="hard">Күрделі</button>
+                        </div>
+                        <button class="btn btn-glow btn-lg" id="quiz-start-btn">Quiz бастау</button>
+                    </div>
+
+                    <div class="quiz-game">
+                        <div class="quiz-progress">
+                            <span id="quiz-qnum">1/10</span>
+                            <div class="quiz-pbar"><div class="quiz-pfill" id="quiz-pfill"></div></div>
+                            <div class="quiz-timer"><span id="quiz-time">60</span>с</div>
+                        </div>
+                        <div class="quiz-question" id="quiz-q"></div>
+                        <div class="quiz-opts" id="quiz-opts"></div>
+                        <div class="build-feedback" id="quiz-feedback"></div>
+                        <button class="btn btn-glow btn-sm" id="quiz-next" style="display:none">Келесі сұрақ</button>
+                    </div>
+
+                    <div class="quiz-result" id="quiz-result" style="display:none">
+                        <div class="qss-icon" id="qr-icon">🏆</div>
+                        <h3 id="qr-title">Нәтиже</h3>
+                        <div class="qr-score" id="qr-score-num">0</div>
+                        <div class="qr-stats">
+                            <div>Дұрыс: <strong id="qr-correct">0</strong></div>
+                            <div>Қате: <strong id="qr-wrong">0</strong></div>
+                        </div>
+                        <button class="btn btn-glow btn-sm" id="quiz-restart">Қайта бастау</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-panel" id="game-tf" style="display:none">
+                <div class="glass animate-on-scroll">
+                    <div class="tf-start" id="tf-start">
+                        <div class="qss-icon">✅</div>
+                        <h3>Рас немесе жалған</h3>
+                        <p class="hero-desc" style="max-width:560px;margin:0 auto 20px">Қысқа тұжырымдардың шын не жалған екенін анықтаңыз.</p>
+                        <button class="btn btn-glow btn-lg" id="tf-start-btn">Ойынды бастау</button>
+                    </div>
+
+                    <div class="tf-game">
+                        <div class="tf-progress">
+                            <span id="tf-num">1/10</span>
+                            <span id="tf-score">Ұпай: 0</span>
+                        </div>
+                        <div class="tf-statement" id="tf-statement"></div>
+                        <div class="tf-buttons">
+                            <button class="btn btn-glow btn-lg" id="tf-true">Рас</button>
+                            <button class="btn btn-danger btn-lg" id="tf-false">Жалған</button>
+                        </div>
+                        <div class="build-feedback" id="tf-feedback"></div>
+                    </div>
+
+                    <div class="quiz-result" id="tf-result" style="display:none">
+                        <div class="qss-icon" id="tf-r-icon">🏆</div>
+                        <h3 id="tf-r-title">Нәтиже</h3>
+                        <div class="qr-score" id="tf-r-score">0</div>
+                        <button class="btn btn-glow btn-sm" id="tf-restart">Қайта бастау</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="badges-section glass animate-on-scroll">
+                <h3>Жетістік белгілері</h3>
+                <div class="badges-grid">
+                    <div class="badge-item locked" data-badge="molecule-builder"><span>🧪</span><strong>Құрастырушы</strong><br><small>Күрделі молекула құрастыр</small></div>
+                    <div class="badge-item locked" data-badge="reaction-master"><span>⚗️</span><strong>Реакция шебері</strong><br><small>Пазлды сәтті аяқта</small></div>
+                    <div class="badge-item locked" data-badge="first-quiz"><span>🎯</span><strong>Алғашқы quiz</strong><br><small>Quiz режимін баста</small></div>
+                    <div class="badge-item locked" data-badge="perfect-score"><span>🏆</span><strong>100 ұпай</strong><br><small>Quiz-де толық ұпай жина</small></div>
+                    <div class="badge-item locked" data-badge="tf-expert"><span>✅</span><strong>Логика шебері</strong><br><small>Рас/жалғанда жоғары нәтиже көрсет</small></div>
+                    <div class="badge-item unlocked"><span>🚀</span><strong>VALab</strong><br><small>Оқуды ойынмен бастадыңыз</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>© 2026 VALab</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
